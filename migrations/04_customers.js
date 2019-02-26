@@ -11,9 +11,9 @@ exports.up = function(knex, Promise) {
 
     table.string('phoneNumber').notNullable().defaultTo('')
 
-    table.string('favoritePlayerFirstName')
+    table.string('favoritePlayerFirstName').notNullable().defaultTo('')
 
-    table.string('favoritePlayerLastName')
+    table.string('favoritePlayerLastName').notNullable().defaultTo('')
 
     table.integer('favoritePlayerId')
     table.foreign('favoritePlayerId').references('athletes.id').onDelete('CASCADE')
